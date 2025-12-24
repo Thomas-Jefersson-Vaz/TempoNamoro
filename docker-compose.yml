@@ -10,7 +10,7 @@ services:
     # Como você é técnico e usa Tailscale/Cloudflare, 
     # recomendo usar uma rede específica ou mapear uma porta alta.
     ports:
-      - "8080:80"
+      - "3434:80"
     networks:
       - proxy-tier # Se você já tiver a rede do Nginx Proxy Manager criada
 
