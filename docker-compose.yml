@@ -5,7 +5,7 @@ services:
     build:
       context: .
       dockerfile: Dockerfile
-    container_name: site-node-react
+    container_name: tempo_namoro
     restart: always
     # Como você é técnico e usa Tailscale/Cloudflare, 
     # recomendo usar uma rede específica ou mapear uma porta alta.
