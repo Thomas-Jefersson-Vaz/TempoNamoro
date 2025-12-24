@@ -1,0 +1,19 @@
+version: '3.8'
+
+services:
+  meu-site:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: site-node-react
+    restart: always
+    # Como você é técnico e usa Tailscale/Cloudflare, 
+    # recomendo usar uma rede específica ou mapear uma porta alta.
+    ports:
+      - "8080:80"
+    networks:
+      - proxy-tier # Se você já tiver a rede do Nginx Proxy Manager criada
+
+networks:
+  proxy-tier:
+    external: true
